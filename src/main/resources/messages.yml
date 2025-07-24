@@ -1,2 +1,7 @@
 messages:
   ping: "&bTu &b&lPING &bes: &f&l<ping> &bms."
+
+hub:
+  not-available: "&cNo hay servidores de Hub disponibles en este momento."
+  already-there: "&eYa estás en un servidor Hub."
+  connecting: "&aConectando a un servidor Hub..."
