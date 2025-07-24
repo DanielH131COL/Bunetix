@@ -1,6 +1,6 @@
 package github.danielh131col.bunetix;
 
-import github.danielh131col.bunetix.commands.PingCommand;
+import github.danielh131col.bunetix.commands.*;
 import github.danielh131col.bunetix.utils.CC;
 import github.danielh131col.bunetix.utils.FileManager;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -32,6 +32,7 @@ public final class Bunetix extends Plugin {
         fileManager = new FileManager(this);
         fileManager.setup();
 
+        getProxy().getPluginManager().registerCommand(this, new HubCommand());
         getProxy().getPluginManager().registerCommand(this, new PingCommand());
     }
 
