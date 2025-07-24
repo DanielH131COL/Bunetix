@@ -27,7 +27,7 @@ public class PingCommand extends Command {
         }
 
         ProxiedPlayer player = (ProxiedPlayer) sender;
-        String message = Bunetix.getInstance().getFileManager().getMessages().getString("MESSAGES.PING");
+        String message = Bunetix.getInstance().getFileManager().getMessages().getString("messages.ping");
 
         if (args.length == 0) {
             int ping = player.getPing();
