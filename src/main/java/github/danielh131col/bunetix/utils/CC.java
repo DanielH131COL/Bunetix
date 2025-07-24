@@ -1,5 +1,6 @@
 package github.danielh131col.bunetix.utils;
 
+import com.iridium.iridiumcolorapi.IridiumColorAPI;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
@@ -21,7 +22,7 @@ public class CC {
     private static final String NO_ONLINE = "&cEse jugador no está en línea.";
 
     public static String translate(String text) {
-        return ChatColor.translateAlternateColorCodes('&', text);
+        return IridiumColorAPI.process(ChatColor.translateAlternateColorCodes('&', text));
     }
 
     public static void msg(CommandSender sender, String message) {
