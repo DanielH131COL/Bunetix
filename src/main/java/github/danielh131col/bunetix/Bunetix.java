@@ -3,17 +3,24 @@ package github.danielh131col.bunetix;
 import github.danielh131col.bunetix.commands.*;
 import github.danielh131col.bunetix.commands.messages.MessageCommand;
 import github.danielh131col.bunetix.commands.messages.ReplyCommand;
+import github.danielh131col.bunetix.commands.staff.StaffChatCommand;
 import github.danielh131col.bunetix.listeners.AnnouncementManager;
 import github.danielh131col.bunetix.listeners.GeneralListener;
+import github.danielh131col.bunetix.listeners.StaffListener;
 import github.danielh131col.bunetix.utils.CC;
 import github.danielh131col.bunetix.utils.FileManager;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Plugin;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Bunetix extends Plugin {
 
     private static Bunetix instance;
     private FileManager fileManager;
     private AnnouncementManager announcementManager;
+    public static List<ProxiedPlayer> inSc = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -44,7 +51,9 @@ public final class Bunetix extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new MessageCommand());
         getProxy().getPluginManager().registerCommand(this, new ReplyCommand());
         getProxy().getPluginManager().registerCommand(this, new ReloadCommand(this));
+        getProxy().getPluginManager().registerCommand(this, new StaffChatCommand(this));
 
+        getProxy().getPluginManager().registerListener(this, new StaffListener());
         getProxy().getPluginManager().registerListener(this, new GeneralListener(this));
     }
 
@@ -67,6 +76,10 @@ public final class Bunetix extends Plugin {
 
     public FileManager getFileManager() {
         return fileManager;
+    }
+
+    public static List<ProxiedPlayer> getInSc() {
+        return inSc;
     }
 
 }

@@ -18,3 +18,11 @@ messages:
     already-there: "&eYa estás en un servidor Hub."
     connecting: "&aConectando a un servidor Hub..."
     redirect-kick: "&cFuiste redirigido a un hub porque el servidor anterior se desconectó."
+
+  staffchat:
+    enabled: "&aHas activado el modo StaffChat."
+    disabled: "&cHas desactivado el modo StaffChat."
+    format: "&7(&e%server%&7) &b%player%&7: &f%message%"
+    join-hub: "&8[&a◆&8] &7%player% &eha entrado al servidor."
+    switch-server: "&8[&b⇨&8] &7%player% &ese movió al servidor &b(%server%)&e."
+    chat-format: "&7(%server%) &e%player%&7: &f%message%"
