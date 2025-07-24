@@ -26,11 +26,19 @@ public class FileManager {
     public void setup() {
         createFile("config.yml");
         createFile("messages.yml");
+        loadFiles();
+    }
 
+    public void loadFiles() {
         try {
-            config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(plugin.getDataFolder(), "config.yml"));
-            messages = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(plugin.getDataFolder(), "messages.yml"));
+            config = ConfigurationProvider.getProvider(YamlConfiguration.class)
+                    .load(new File(plugin.getDataFolder(), "config.yml"));
+            messages = ConfigurationProvider.getProvider(YamlConfiguration.class)
+                    .load(new File(plugin.getDataFolder(), "messages.yml"));
+
+            plugin.getLogger().info("Los archivos de configuración fueron recargados correctamente.");
         } catch (IOException e) {
+            plugin.getLogger().severe("Error al recargar los archivos de configuración:");
             e.printStackTrace();
         }
     }
@@ -48,11 +56,13 @@ public class FileManager {
                         while ((length = in.read(buffer)) > 0) {
                             out.write(buffer, 0, length);
                         }
+                        plugin.getLogger().info("Archivo creado: " + name);
                     }
                 } else {
                     plugin.getLogger().warning(name + " no fue encontrado en el JAR.");
                 }
             } catch (IOException e) {
+                plugin.getLogger().severe("Error al crear el archivo " + name);
                 e.printStackTrace();
             }
         }
@@ -68,16 +78,20 @@ public class FileManager {
 
     public void saveConfig() {
         try {
-            ConfigurationProvider.getProvider(YamlConfiguration.class).save(config, new File(plugin.getDataFolder(), "config.yml"));
+            ConfigurationProvider.getProvider(YamlConfiguration.class)
+                    .save(config, new File(plugin.getDataFolder(), "config.yml"));
         } catch (IOException e) {
+            plugin.getLogger().severe("No se pudo guardar config.yml");
             e.printStackTrace();
         }
     }
 
     public void saveMessages() {
         try {
-            ConfigurationProvider.getProvider(YamlConfiguration.class).save(messages, new File(plugin.getDataFolder(), "messages.yml"));
+            ConfigurationProvider.getProvider(YamlConfiguration.class)
+                    .save(messages, new File(plugin.getDataFolder(), "messages.yml"));
         } catch (IOException e) {
+            plugin.getLogger().severe("No se pudo guardar messages.yml");
             e.printStackTrace();
         }
     }

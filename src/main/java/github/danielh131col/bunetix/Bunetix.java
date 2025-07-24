@@ -38,6 +38,7 @@ public final class Bunetix extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new PingCommand());
         getProxy().getPluginManager().registerCommand(this, new MessageCommand());
         getProxy().getPluginManager().registerCommand(this, new ReplyCommand());
+        getProxy().getPluginManager().registerCommand(this, new ReloadCommand(this));
     }
 
     @Override
