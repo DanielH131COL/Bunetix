@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
  */
 public class CC {
 
-    private static final String PREFIX = "&b&lBUNETIX &f⇨ ";
     private static final String NO_CONSOLE = "&cEste comando no puede usarse desde la consola.";
     private static final String NO_PERMISSION = "&cNo tienes permiso para hacer esto.";
     private static final String NO_ONLINE = "&cEse jugador no está en línea.";
@@ -38,11 +37,11 @@ public class CC {
     }
 
     public static void noConsole(CommandSender sender) {
-        sender.sendMessage(translate(PREFIX + NO_CONSOLE));
+        sender.sendMessage(translate("&4&lBUNETIX &c⇨" + NO_CONSOLE));
     }
 
     public static void noPermission(CommandSender sender) {
-        sender.sendMessage(translate(PREFIX + NO_PERMISSION));
+        sender.sendMessage(translate("&4&lBUNETIX &c⇨" + NO_PERMISSION));
     }
 
     public static void noOnline(CommandSender sender) {
