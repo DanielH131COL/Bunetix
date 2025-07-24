@@ -37,11 +37,11 @@ public class CC {
     }
 
     public static void noConsole(CommandSender sender) {
-        sender.sendMessage(translate("&4&lBUNETIX &c⇨" + NO_CONSOLE));
+        sender.sendMessage(translate("&4&lBUNETIX &c⇨ " + NO_CONSOLE));
     }
 
     public static void noPermission(CommandSender sender) {
-        sender.sendMessage(translate("&4&lBUNETIX &c⇨" + NO_PERMISSION));
+        sender.sendMessage(translate("&4&lBUNETIX &c⇨ " + NO_PERMISSION));
     }
 
     public static void noOnline(CommandSender sender) {
