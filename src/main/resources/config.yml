@@ -1,0 +1,5 @@
+servers:
+  hubs:
+    - "hub1"
+    - "hub2"
+    - "lobby"
