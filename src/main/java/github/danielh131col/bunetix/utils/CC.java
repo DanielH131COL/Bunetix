@@ -3,6 +3,7 @@ package github.danielh131col.bunetix.utils;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.chat.TextComponent;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +23,10 @@ public class CC {
 
     public static String translate(String text) {
         return ChatColor.translateAlternateColorCodes('&', text);
+    }
+
+    public static void msg(CommandSender sender, String message) {
+        sender.sendMessage(new TextComponent(translate(message)));
     }
 
     public static List<String> translate(List<String> texts) {
