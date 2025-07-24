@@ -1,6 +1,8 @@
 package github.danielh131col.bunetix;
 
 import github.danielh131col.bunetix.commands.*;
+import github.danielh131col.bunetix.commands.messages.MessageCommand;
+import github.danielh131col.bunetix.commands.messages.ReplyCommand;
 import github.danielh131col.bunetix.utils.CC;
 import github.danielh131col.bunetix.utils.FileManager;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -34,6 +36,8 @@ public final class Bunetix extends Plugin {
 
         getProxy().getPluginManager().registerCommand(this, new HubCommand());
         getProxy().getPluginManager().registerCommand(this, new PingCommand());
+        getProxy().getPluginManager().registerCommand(this, new MessageCommand());
+        getProxy().getPluginManager().registerCommand(this, new ReplyCommand());
     }
 
     @Override
