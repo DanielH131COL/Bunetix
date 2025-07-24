@@ -16,13 +16,13 @@ public class ReloadCommand extends Command {
     private final Bunetix plugin;
 
     public ReloadCommand(Bunetix plugin) {
-        super("breload", "bunetix.reload", "breload");
+        super("breload", "bunetix.reload");
         this.plugin = plugin;
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         plugin.getFileManager().loadFiles();
-        sender.sendMessage(CC.translate("&a&lBUNETIX ⇨ ¡Reload completado!"));
+        sender.sendMessage(CC.translate("&a&lBUNETIX ⇨ &a¡Reload completado!"));
     }
 }
