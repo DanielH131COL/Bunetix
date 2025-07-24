@@ -47,7 +47,7 @@ public class HubCommand extends Command {
 
         if (availableHubs.isEmpty()) {
             player.sendMessage(new TextComponent(CC.translate(
-                    Bunetix.getInstance().getFileManager().getMessages().getString("hub.not-available")
+                    Bunetix.getInstance().getFileManager().getMessages().getString("messages.hub.not-available")
             )));
             return;
         }
@@ -55,7 +55,7 @@ public class HubCommand extends Command {
         String currentServer = player.getServer().getInfo().getName();
         if (hubList.stream().anyMatch(s -> s.equalsIgnoreCase(currentServer))) {
             player.sendMessage(new TextComponent(CC.translate(
-                    Bunetix.getInstance().getFileManager().getMessages().getString("hub.already-there")
+                    Bunetix.getInstance().getFileManager().getMessages().getString("messages.hub.already-there")
             )));
             return;
         }
@@ -64,6 +64,6 @@ public class HubCommand extends Command {
         ServerInfo chosenHub = availableHubs.get(0);
 
         player.connect(chosenHub);
-        player.sendMessage(new TextComponent(CC.translate(Bunetix.getInstance().getFileManager().getMessages().getString("hub.connecting"))));
+        player.sendMessage(new TextComponent(CC.translate(Bunetix.getInstance().getFileManager().getMessages().getString("messages.hub.connecting"))));
     }
 }

@@ -13,7 +13,8 @@ messages:
     to-format: "&a<target>&7: &f<message>"
     from-format: "&a<sender>&7: &f<message>"
 
-hub:
-  not-available: "&cNo hay servidores de Hub disponibles en este momento."
-  already-there: "&eYa estás en un servidor Hub."
-  connecting: "&aConectando a un servidor Hub..."
+  hub:
+    not-available: "&cNo hay servidores de Hub disponibles en este momento."
+    already-there: "&eYa estás en un servidor Hub."
+    connecting: "&aConectando a un servidor Hub..."
+    redirect-kick: "&cFuiste redirigido a un hub porque el servidor anterior se desconectó."
