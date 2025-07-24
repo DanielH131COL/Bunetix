@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  */
 public class CC {
 
-    private static final String PREFIX = "&7[&bBunetix&7] ";
+    private static final String PREFIX = "&b&lBUNETIX &f⇨ ";
     private static final String NO_CONSOLE = "&cEste comando no puede usarse desde la consola.";
     private static final String NO_PERMISSION = "&cNo tienes permiso para hacer esto.";
     private static final String NO_ONLINE = "&cEse jugador no está en línea.";
