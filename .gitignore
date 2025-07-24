@@ -1,0 +1,20 @@
+# Ignorar archivos compilados
+/target/
+/build/
+/out/
+
+# Ignorar JARs
+*.jar
+
+# Ignorar clases compiladas
+*.class
+
+# Ignorar configuraciones locales de IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignorar logs, temp
+*.log
+*.tmp
