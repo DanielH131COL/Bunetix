@@ -1,5 +1,17 @@
 messages:
-  ping: "&bTu &b&lPING &bes: &f&l<ping> &bms."
+  ping: "&bPing: &f&l<ping> &bms."
+
+  msg:
+    usage: "&cUso: /msg <jugador> <mensaje>"
+    not-found: "&cJugador no encontrado."
+    to-format: "&a<target>&7: &f<message>"
+    from-format: "&a<sender>&7: &f<message>"
+
+  reply:
+    usage: "&cUso: /r <mensaje>"
+    no-target: "&cNo tienes a nadie a quien responder."
+    to-format: "&a<target>&7: &f<message>"
+    from-format: "&a<sender>&7: &f<message>"
 
 hub:
   not-available: "&cNo hay servidores de Hub disponibles en este momento."
