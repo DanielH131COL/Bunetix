@@ -3,3 +3,29 @@ servers:
     - "hub1"
     - "hub2"
     - "lobby"
+
+announcements:
+  tienda:
+    interval: 2 # en segundos
+    lines:
+      - "&bVisita nuestra tienda online:"
+      - "&fhttps://store.bunetix.dev"
+
+  redes:
+    interval: 4
+    lines:
+      - "&aSíguenos en nuestras redes sociales:"
+      - "&fTwitter: @BunetixDev"
+      - "&fTikTok: @BunetixTikTok"
+
+  reglas:
+    interval: 6
+    lines:
+      - "&cRecuerda seguir las reglas del servidor."
+      - "&7Usa &e/reglas &7para verlas."
+
+  discord:
+    interval: 8
+    lines:
+      - "&9Únete a nuestro Discord:"
+      - "&fdiscord.gg/BunetixDiscord"

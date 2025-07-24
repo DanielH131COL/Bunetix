@@ -3,6 +3,7 @@ package github.danielh131col.bunetix;
 import github.danielh131col.bunetix.commands.*;
 import github.danielh131col.bunetix.commands.messages.MessageCommand;
 import github.danielh131col.bunetix.commands.messages.ReplyCommand;
+import github.danielh131col.bunetix.listeners.AnnouncementManager;
 import github.danielh131col.bunetix.listeners.GeneralListener;
 import github.danielh131col.bunetix.utils.CC;
 import github.danielh131col.bunetix.utils.FileManager;
@@ -12,6 +13,7 @@ public final class Bunetix extends Plugin {
 
     private static Bunetix instance;
     private FileManager fileManager;
+    private AnnouncementManager announcementManager;
 
     @Override
     public void onEnable() {
@@ -34,6 +36,8 @@ public final class Bunetix extends Plugin {
 
         fileManager = new FileManager(this);
         fileManager.setup();
+        announcementManager = new AnnouncementManager(this);
+        announcementManager.start();
 
         getProxy().getPluginManager().registerCommand(this, new HubCommand());
         getProxy().getPluginManager().registerCommand(this, new PingCommand());
@@ -46,6 +50,15 @@ public final class Bunetix extends Plugin {
 
     @Override
     public void onDisable() {
+        announcementManager.stop();
+
+        CC.console("&8&m-----------------------------");
+        CC.console("");
+        CC.console("          &c&lBUNETIX");
+        CC.console("     &7Se ha &c&ldesactivado &7el plugin.");
+        CC.console("     &7Gracias por usar &bBunetix&7.");
+        CC.console("");
+        CC.console("&8&m-----------------------------");
     }
 
     public static Bunetix getInstance() {
