@@ -46,6 +46,7 @@ public final class Bunetix extends Plugin {
         announcementManager = new AnnouncementManager(this);
         announcementManager.start();
 
+        getProxy().getPluginManager().registerCommand(this, new StreamCommand(this));
         getProxy().getPluginManager().registerCommand(this, new HubCommand());
         getProxy().getPluginManager().registerCommand(this, new PingCommand());
         getProxy().getPluginManager().registerCommand(this, new MessageCommand());
