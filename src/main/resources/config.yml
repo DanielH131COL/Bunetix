@@ -4,6 +4,23 @@ servers:
     - "hub2"
     - "lobby"
 
+stream:
+  cooldown-seconds: 300
+
+  supported-platforms:
+    Twitch:
+      regex: ".*twitch\\.tv.*"
+      icon: "✦"
+      color: "&5"
+    Kick:
+      regex: ".*kick\\.com.*"
+      icon: "⚡"
+      color: "&a"
+    YouTube:
+      regex: ".*(youtube\\.com|youtu\\.be).*"
+      icon: "▶"
+      color: "&c"
+
 announcements:
   tienda:
     interval: 2 # en segundos
