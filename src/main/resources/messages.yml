@@ -26,3 +26,13 @@ messages:
     join-hub: "&8[&a◆&8] &7%player% &eha entrado al servidor."
     switch-server: "&8[&b⇨&8] &7%player% &ese movió al servidor &b(%server%)&e."
     chat-format: "&7(%server%) &e%player%&7: &f%message%"
+
+  stream:
+    header: "&7&l~~~~~~~~~~~~~~~~~~~~"
+    line: "%color%%icon% &l%platform%"
+    status: "%color%%player%&f está transmitiendo en %color%%platform%"
+    link-hover: "&eClic para abrir el enlace"
+    footer: "&7&l~~~~~~~~~~~~~~~~~~~~"
+    usage: "&cUso: /stream <link>"
+    unsupported: "&4&lSTREAM &c⇨ &cPlataforma no soportada. Usa un enlace de Twitch, Kick o YouTube."
+    cooldown: "&4&lCOOLDOWN &c⇨ Debes esperar %time% antes de usar este comando nuevamente."
