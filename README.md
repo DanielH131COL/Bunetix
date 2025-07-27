@@ -19,6 +19,9 @@
 - 📢 **Sistema de Anuncios Automáticos (Announcer)**  
   Anuncios rotativos configurables por servidor y con soporte de intervalos personalizados.
 
+- 📺 **Comando de Stream Personalizado**  
+  Los jugadores pueden usar `/stream <link>` para anunciar que están transmitiendo en Twitch, Kick o YouTube. ¡Con colores, íconos y soporte hover!
+
 - ⚙️ **Sistema de Archivos Modular (`FileManager`)**  
   Carga y gestión sencilla de archivos como `config.yml` y `messages.yml`.
 
@@ -26,7 +29,7 @@
   Usa mensajes coloridos con gradientes, hexadecimales y formatos tradicionales de Minecraft (`&`).
 
 - 🛡️ **Sistema de Permisos Integrado**  
-  Compatible con cualquier sistema de permisos, usando `Bunetix.staff` y `Bunetix.staffchat`.
+  Compatible con cualquier sistema de permisos, usando `Bunetix.staff`, `Bunetix.staffchat` y `Bunetix.stream`.
 
 ---
 
@@ -45,6 +48,9 @@
 - 📢 **Automated Announcer System**  
   Sends rotating announcements per-server with custom intervals and fancy formatting.
 
+- 📺 **Custom Stream Command**  
+  Players can use `/stream <link>` to broadcast their Twitch, Kick or YouTube streams — fully configurable with icons and hover text.
+
 - ⚙️ **Modular File System (`FileManager`)**  
   Loads and manages YAML files like `config.yml` and `messages.yml`.
 
@@ -52,7 +58,7 @@
   Rich chat message formatting using gradients, hex colors and `&` codes.
 
 - 🛡️ **Built-in Permission Checks**  
-  Works with any permission plugin using nodes like `Bunetix.staff` and `Bunetix.staffchat`.
+  Works with any permission plugin using nodes like `Bunetix.staff`, `Bunetix.staffchat` and `Bunetix.stream`.
 
 ---
 
@@ -67,6 +73,23 @@ servers:
     - "hub2"
     - "lobby"
 
+stream:
+  cooldown-seconds: 300 # Tiempo en segundos entre usos del comando
+
+  supported-platforms:
+    Twitch:
+      regex: ".*twitch\\.tv.*"
+      icon: "✦"
+      color: "&5"
+    Kick:
+      regex: ".*kick\\.com.*"
+      icon: "⚡"
+      color: "&a"
+    YouTube:
+      regex: ".*(youtube\\.com|youtu\\.be).*"
+      icon: "▶"
+      color: "&c"
+
 announcements:
   tienda:
     interval: 2
@@ -79,7 +102,6 @@ announcements:
     lines:
       - "&aSíguenos en nuestras redes sociales"
       - "&bTwitter y TikTok: @HylurCraft"
-
 ```
 ### `messages.yml`
 

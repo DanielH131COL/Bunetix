@@ -5,7 +5,7 @@ servers:
     - "lobby"
 
 stream:
-  cooldown-seconds: 300
+  cooldown-seconds: 300 # Tiempo en segundos entre usos del comando
 
   supported-platforms:
     Twitch:
